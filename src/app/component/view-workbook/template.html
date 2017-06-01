@@ -1,0 +1,23 @@
+<div class="view-workbook" *ngIf="currentSheet">
+  <hr />
+  <h4>
+    Excel Viewer
+    <button
+      type="button"
+      class="btn btn-sm btn-danger float-right"
+      (click)="closeHandler($event)"
+    >close</button>
+  </h4>
+  <hr />
+  <hot-table
+    [data]="currentSheet"
+    [options]="options"
+  ></hot-table>
+  <hr />
+  <button
+    *ngFor="let sheet of sheetNames"
+    (click)="changeSheetHandler(sheet)"
+    class="btn btn-sm btn-info"
+    style="margin: 5px;"
+  >{{sheet}}</button>
+</div>

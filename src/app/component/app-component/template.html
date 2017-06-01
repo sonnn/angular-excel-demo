@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="header">
+  </div>
+  <div class="body">
+    <div class="row">
+      <div class="col-md-4 col-md-pull-8" style="border-right: 1px solid #ddd">
+        <local-file (onView)="viewHandler($event)" #local></local-file>
+        <server-file (onView)="viewHandler($event)" #server></server-file>
+      </div>
+      <div class="col-md-push-4 col-md-8">
+        <!-- local.loadFiles() interesting huh? -->
+        <upload-control
+          (onView)="viewHandler($event)"
+          (onSaveLocal)="local.loadFiles()"
+          (onUpload)="server.loadFiles()"
+        ></upload-control>
+        <view-workbook [data]="workbook"></view-workbook>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <hr />
+    <p style="text-align: center;">
+      sonnn | <a href="https://github.com/sonnn" target="_blank">github</a> | 
+      <a href="https://www.linkedin.com/in/sonnnn" target="_blank">linkedin</a>
+    </p>
+  </footer>
+</div>

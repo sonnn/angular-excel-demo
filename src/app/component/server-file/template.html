@@ -1,0 +1,17 @@
+<div class="local-file">
+  <h4>Server files
+    <button
+      type="button"
+      class="btn btn-sm btn-primary float-right "
+      (click)="loadFiles($event)"
+    >⟳</button>
+  </h4>
+  <hr />
+  <ul class="file-list">
+    <li *ngFor="let file of files">
+      <button class="btn btn-sm btn-success" (click)="viewHandler(file.name)" title="open">📑</button> 
+      <button class="btn btn-sm btn-danger" (click)="removeFileHandler(file.name)" title="delete">🔥</button>
+      {{file.name}}
+    </li>
+  </ul>
+</div>

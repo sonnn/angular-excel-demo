@@ -1,0 +1,26 @@
+.upload-block {
+  input[type="file"] {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+
+    & + label {
+      color: white;
+      background-color: orange;
+      display: inline-block;
+      cursor: pointer;
+      margin: 0;
+      max-width: 200px;
+      text-overflow: ellipsis;
+      overflow: hidden
+    }
+
+    &:focus + label,
+    & + label:hover {
+      background-color: red;
+    }
+  }
+}

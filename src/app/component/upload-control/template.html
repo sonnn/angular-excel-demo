@@ -1,0 +1,28 @@
+<div class="upload-block">
+  <input
+      [attr.id]="id"
+      (change)="onChange($event)"
+      type="file"
+      name="sampleFile"
+      accept=".xls,.xlsx,.csv"
+    />
+    <label class="btn btn-sm" for="sampleFile">{{label}}</label>
+    
+    <button
+      class="btn btn-success btn-sm float-right"
+      type="button"
+      (click)="uploadHandler()"
+    >Upload</button>
+    
+    <span
+      class="btn btn-primary btn-sm float-right"
+      (click)="saveLocalHandler()"
+      style="margin: 0 5px;"
+    >Save to local</span>
+
+    <span
+      class="btn btn-info btn-sm float-right"
+      *ngIf="isViewOnFly"
+      (click)="viewHandler()"
+    >View on fly</span>
+</div>
