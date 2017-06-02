@@ -33,7 +33,7 @@ function setup(app) {
   // simple get upload file
   app.get('/upload', (req, res) => {
     const base = path.join(__dirname, '/src/public/upload');
-    const files = fs.readdirSync(base);
+    const files = fs.readdirSync(base).filter(s => s !== 'tmp');
     const fileName = req.query.file;
 
     if (!fileName) {

@@ -1,4 +1,6 @@
 node_modules
 npm-debug.log
 debug.log
-src/public/upload/*
+src/public/upload/*.csv
+src/public/upload/*.xlsx
+src/public/upload/*.xls
