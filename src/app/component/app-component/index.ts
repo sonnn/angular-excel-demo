@@ -18,13 +18,4 @@ export class AppComponent {
     // can do other way safer by close the workbook before view it
     setTimeout(() => this.workbook = workbook, 100);
   }
-
-  /**
-   * call back after save local trigger update list local files
-   * @param {any} filename 
-   * @memberof AppComponent
-   */
-  saveLocalHandler(filename) {
-    console.log(`${filename} save to localstorage!`);
-  }
 }

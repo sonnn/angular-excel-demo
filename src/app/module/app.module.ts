@@ -7,10 +7,11 @@ import { UploadControl }  from '../component/upload-control';
 import { ViewWorkbook }  from '../component/view-workbook';
 import { LocalFile }  from '../component/local-file';
 import { ServerFile }  from '../component/server-file';
+import { PingAlive }  from '../component/ping-alive';
 
 @NgModule({
   imports:      [ BrowserModule, HotTableModule ],
-  declarations: [ AppComponent, UploadControl, ViewWorkbook, LocalFile, ServerFile ],
+  declarations: [ AppComponent, UploadControl, ViewWorkbook, LocalFile, ServerFile, PingAlive ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

@@ -64,6 +64,12 @@ function setup(app) {
       res.json({ message: `File ${fileName} delete successful` });
     }
   });
+
+  // consider use socket 
+  // ping 
+  app.get('/ping', (req, res) => {
+    res.json({ pong: true });
+  });
   
   app.get('/', (req, res) => { res.sendFile(indexPath) });
 }

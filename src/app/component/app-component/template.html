@@ -1,7 +1,12 @@
 <div class="container">
   <div class="header">
+    <h3 class="text-muted">Angular Excel Viewer Demo</h3>
   </div>
   <div class="body">
+    <hr/>
+    <div class="row">
+      <ping-alive style="display: block;width: 100%;"></ping-alive>
+    </div>
     <div class="row">
       <div class="col-md-4 col-md-pull-8" style="border-right: 1px solid #ddd">
         <local-file (onView)="viewHandler($event)" #local></local-file>
